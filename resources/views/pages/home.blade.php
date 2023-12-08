@@ -12,42 +12,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                </svg>
+                <img src="{{ asset('./img/daily-news-announcement-information-report-concept.jpg') }}" alt="" class="bd-placeholder-img card-img-top"
+                    style="height: 800px; ">
                 <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Example headline.</h1>
-                        <p>Some representative placeholder content for the first slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                    </div>
                 </div>
             </div>
             <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                </svg>
+                <img src="{{ asset('./img/koran.jpg') }}" alt="" class="bd-placeholder-img card-img-top"
+                    style="height: 800px; ">
                 <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Some representative placeholder content for the second slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                    </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                </svg>
+                <img src="{{ asset('./img/newspaper-background-concept.jpg') }}" alt="" class="bd-placeholder-img card-img-top"
+                    style="height: 800px; ">
                 <div class="container">
-                    <div class="carousel-caption">
-                        <h1>One more for good measure.</h1>
-                        <p>Some representative placeholder content for the third slide of this carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -60,13 +39,17 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="container mt-3">
+    <br>
+    <br><br>
+    <div class="container ">
         <div class="row">
+          <br>
+          <br>
             @foreach ($allBerita as $item)
-                <div class="col-lg-4 col-md">
-                    <div class="card">
+                <div class="col-lg-4 pt-200 mb-4">
+                    <div class="card ">
                         <img src="{{ asset('img/gambar/' . $item->gambar) }}" class="bd-placeholder-img card-img-top"
-                            alt="">
+                            alt="" style="height: 300px;">
                         <div class="card-body">
                             <div class="card-title h5 fw-bold">{{ Str::limit($item->judul, 25, '...') }}</div>
                             <p class="card-text">{!! Str::words($item->isi, 30, '...') !!}</p>
@@ -80,6 +63,7 @@
                     </div>
                 </div>
             @endforeach
+            <br>
         </div>
     </div>
     </div>

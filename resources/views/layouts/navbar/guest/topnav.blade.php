@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-md shadow-sm">
+<nav class="navbar navbar-expand-md shadow-sm" id="navbarParallax" data-parallax="scroll">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -17,7 +17,7 @@
                     <a class="nav-link active" aria-current="page" href="home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="">Berita</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
@@ -59,3 +59,14 @@
         </div>
     </div>
 </nav>
+<!-- Pastikan library parallax.js sudah disertakan sebelum script ini -->
+@section('scripts')
+<script src="path/to/parallax.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Inisialisasi efek paralaks pada elemen dengan ID navbarParallax
+        var navbarParallax = new Parallax(document.getElementById('navbarParallax'));
+    });
+</script>
+@endsection
+
